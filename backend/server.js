@@ -9,6 +9,7 @@ import cartRoutes from "./routes/cart.route.js";
 import couponRoutes from "./routes/coupon.routes.js";
 import paymentRoutes from "./routes/payment.route.js";
 import analyticsRoutes from "./routes/analytics.route.js";
+// import orderRoutes from "./routes/order.routes.js"
 import { searchProductController } from './controllers/product.controller.js';
 import { connectDB } from "./lib/db.js";
 
@@ -41,6 +42,7 @@ app.use("/api/coupons", couponRoutes);
 app.use("/api/payments", paymentRoutes);
 app.use("/api/analytics", analyticsRoutes);
 app.use("/api/users", usersRoutes);
+// app.use("/api/orders", orderRoutes);
 app.get("/api/search/:keyword", searchProductController);
 
 
